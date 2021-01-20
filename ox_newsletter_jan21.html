@@ -53,20 +53,34 @@
 	}
 
   .darkmode, .darkmode div, .darkmode td { /* With class body on the body tag, and all elements represented here that have a background color */
-      background-image: linear-gradient(#ffffff,#ffffff) !important;
-      color: #000!important;
-    }
+    background-image: linear-gradient(#ffffff,#ffffff) !important;
+    color: #000!important;
+  }
 
   .darkmodecream, .darkmodecream div, .darkmodecream td { /* With class body on the body tag, and all elements represented here that have a background color */
-      background-image: linear-gradient(#F3EFDF,#F3EFDF) !important;
-      color: #000!important;
-    }
+    background-image: linear-gradient(#F3EFDF,#F3EFDF) !important;
+    color: #000!important;
+  }
 
   .darkmode p, .darkmodecream p { /* Add other selectors for other text elements */
-      -webkit-text-fill-color: #000!important;
-      color: #000!important;
-    }
+    -webkit-text-fill-color: #000!important;
+    color: #000!important;
+  }
 
+  #stats td p:first-child, .blacklink {
+    text-decoration: none!important;
+    border-bottom: 2px solid #000;
+  }
+
+  .blacklink {
+    text-decoration: none!important;
+    border-bottom: 1px solid #000;
+  }
+
+  .jefflink {
+    text-decoration: none!important;
+    border-bottom: 1px solid #FFF;
+  }
   
 
 	@media only screen and (max-width:599px)  {
@@ -155,6 +169,10 @@
 			padding-top: 74px!important;
 		}
 
+		#send-to-friend p {
+      margin: 10px 0;
+		}
+
 		#share-cta {
 			display: inline-block;
 			text-align: left!important;
@@ -203,6 +221,7 @@
 		#contact-p {
 			overflow: visible;
 			width: 90% !important;
+      margin: 10px 0;
 		}
 
     #linkedin-icon-mobile {
@@ -225,9 +244,17 @@
       padding-bottom: 30px!important;
     }
 
+    #stats {
+      display: block!important;
+    }
+
+    #stats td p:first-child {
+      text-decoration: none!important;
+      border-bottom: 2px solid #000;
+    }
+    
     .block-stats {
       display: block!important;
-      
     }
 
     .stats-padding {
@@ -243,10 +270,6 @@
     #first-p {
       margin-left: 0!important;
       padding-left: 0!important;
-      width: 100%!important;
-    }
-
-    #second-p {
       width: 100%!important;
     }
 
@@ -272,6 +295,14 @@
 
     #bookmark-image {
       padding-bottom: 0!important;
+    }
+
+    #stats td {
+      width: inherit;
+    }
+
+    .fillertd {
+      display: none;
     }
 	
 	}
@@ -482,24 +513,32 @@
               <tbody>
                 
                 <tr id="stats" style="font-size: 36px;">
-                  <td class="block-stats stats-padding" >
-                    <p id="first-stat" style="display: inline-block; margin: 0; border-bottom: 2px solid black; margin-left:80px">+3.5%</p>
-                    <p class="block-stats" id="first-p" style=" display: inline-block; margin: 0; padding-top: 14px;padding-left:80px;font-size: 18px; width: 45%;">average monthly visits</p>
+
+                  <td class="fillertd">&nbsp;</td>
+
+                  <td class="block-stats stats-padding" width="25%" valign="top" style="vertical-align: top;">
+                    <p id="first-stat" style="display: inline!important; margin: 0; /* border-bottom: 2px solid black; /* margin-left:80px;*/ text-decoration:underline;">+3.5%</p>
+                    <p class="block-stats" id="first-p" style=" margin: 0; margin-top: 14px; /*margin-left:80px;*/ font-size: 18px; /* width: 45%; */">average monthly visits</p>
                   </td>
 
-                  <td class="block-stats stats-padding">
-                    <p style="display: inline-block; margin-right: 20px; margin-left: 0; margin-top: 0; margin-bottom: 0; border-bottom: 2px solid black;">+32%</p>
-                    <p class="block-stats" id="second-p"  style=" display: inline-block; margin: 0; padding-top: 14px;padding-right: 10px; font-size: 18px; width: 75%;">conversion rate</p>
+                  <td class="fillertd">&nbsp;</td>
+
+                  <td class="block-stats stats-padding" width="25%" valign="top" style="vertical-align: top;">
+                    <p style="display: inline!important; /* margin-right: 20px;*/  margin-left: 0; margin-top: 0; margin-bottom: 0; /* border-bottom: 2px solid black; */ text-decoration:underline;">+32%</p>
+                    <p class="block-stats" id="second-p" style=" margin: 0; margin-top: 14px; /* margin-right: 10px;*/ font-size: 18px; /* width: 75%;*/">conversion rate</p>
                   </td>
 
-                  <td class="block-stats stats-padding" >
-                    <p style="display: inline-block; margin: 0; border-bottom: 2px solid black; margin-right: 40px;">+67%</p>
-                    <p class="block-stats" style="display: inline-block; margin: 0; padding-top: 14px; padding-right: 40px; font-size: 18px;">content engagement</p>
+                  <td class="fillertd">&nbsp;</td>
+
+                  <td class="block-stats stats-padding" width="25%" valign="top" style="vertical-align: top;">
+                    <p style="display: inline!important; margin: 0; /* border-bottom: 2px solid black; /* margin-right: 40px; */ text-decoration:underline;">+67%</p>
+                    <p class="block-stats" style="margin: 0; margin-top: 14px; /* margin-right: 40px; */ font-size: 18px;">content engagement</p>
                   </td>
+
+                  <td class="fillertd">&nbsp;</td>
+
                 </tr>
-                
-             
-                
+                                
               </tbody>
             </table>
 
@@ -511,7 +550,7 @@
 					            Want to dig deeper?</p>
                     </td>
                     <td id="chat-link" valign="top" style="padding-bottom:0px;padding-top:75px;padding-left:32px; padding-right: 30px; vertical-align:top;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
-                      <a class="link" style="color:#000;text-decoration:none;border-bottom:1px solid #000;mso-border-bottom-alt:1px solid #000;font-family:'Space Mono', monospace;letter-spacing:1.871px;line-height:18px;font-size:16px;padding-bottom:3px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" href="https://officeofexperience.com/#contact-us">LET'S CHAT</a>
+                      <a class="link blacklink" style="color:#000;text-decoration:underline;font-family:'Space Mono', monospace;letter-spacing:1.871px;line-height:18px;font-size:16px;padding-bottom:3px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" href="https://officeofexperience.com/#contact-us">LET'S CHAT</a></span>
                     </td>
                   </tr>
                 </tbody>
@@ -526,7 +565,7 @@
                   <td id="jeff" valign="middle" width="50%" style="padding-left:32px;padding-right:32px;vertical-align:middle;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
                     <img src="https://mcusercontent.com/f0c262661c7720bbbb8a691d9/images/8fd8dae7-7b41-4e11-8f05-d3a2c09d4de5.png" alt="" style="border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" />
                     <p style="color:#FFFFFF;font-family:'Suisse Book', Helvetica, Arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;line-height:36px;text-align:left;margin:28px 0;padding:0;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">Jeff Woelker joins OX as Director of Digital Marketing</p>
-                    <a class="link" style="color:#fff;text-decoration:none;border-bottom:1px solid #fff;mso-border-bottom-alt:1px solid #fff;font-family:'Space Mono', monospace;letter-spacing:1.871px;line-height:18px;font-size:16px;padding-bottom:3px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" href="https://www.linkedin.com/posts/theofficeofexperience_newhire-digital-marketing-activity-6754825370245107712-aTMD/">GET TO KNOW HIM</a>
+                    <a class="link jefflink" style="color:#fff;text-decoration:underline;font-family:'Space Mono', monospace;letter-spacing:1.871px;line-height:18px;font-size:16px;padding-bottom:3px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" href="https://www.linkedin.com/posts/theofficeofexperience_newhire-digital-marketing-activity-6754825370245107712-aTMD/">GET TO KNOW HIM</a>
                   </td>
                   <td id="jeff_img" width="50%" style="text-align:right;padding-right:32px;vertical-align:top;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
                     <img src="https://mcusercontent.com/f0c262661c7720bbbb8a691d9/images/d211f578-e3c3-4ddc-8e14-437a7720f0de.png" width="95%" alt="" style="border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" />
@@ -534,7 +573,7 @@
                   <td id="jeff_duplicate" valign="middle" width="100%" style="display:none;vertical-align:middle;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
                     <img id="linkedin-icon-mobile" src="https://mcusercontent.com/f0c262661c7720bbbb8a691d9/images/8fd8dae7-7b41-4e11-8f05-d3a2c09d4de5.png" alt="" style="border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" />
                     <p style="color:#FFFFFF;font-family:'Suisse Book', Helvetica, Arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;line-height:36px;text-align:left;margin:28px 0;padding:0;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">Jeff Woelker joins OX as Director of Digital Marketing</p>
-                    <a class="link" style="color:#fff;text-decoration:none;border-bottom:1px solid #fff;font-family:'Space Mono',monospace;letter-spacing:1.871px;line-height:18px;font-size:16px;padding-bottom:3px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" href="https://www.linkedin.com/posts/theofficeofexperience_newhire-digital-marketing-activity-6754825370245107712-aTMD/">GET TO KNOW HIM</a>
+                    <a class="link jefflink" style="color:#fff;text-decoration:underline;font-family:'Space Mono',monospace;letter-spacing:1.871px;line-height:18px;font-size:16px;padding-bottom:3px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;" href="https://www.linkedin.com/posts/theofficeofexperience_newhire-digital-marketing-activity-6754825370245107712-aTMD/">GET TO KNOW HIM</a>
                   </td>
                 </tr>
              
@@ -569,7 +608,7 @@
               <tbody>
                 <tr>
                   <td id="send-to-friend" style="padding-left:32px;vertical-align:middle;padding-right:20px;padding-top:59px;padding-bottom:59px;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
-                    <p style="color:#FFFFFF;font-family:'Suisse Book', Helvetica, Arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;line-height:34px;letter-spacing:normal;text-align:left;width:90%;margin:10px 0;padding:0;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+                    <p style="color:#FFFFFF;font-family:'Suisse Book', Helvetica, Arial, sans-serif;font-size:28px;font-style:normal;font-weight:normal;line-height:34px;letter-spacing:normal;text-align:left;width:90%;margin:10px 20px 10px 0;padding:0;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
 					            Interested in sending OXbox to a colleague <span class="nobr">or friend?</span></p>
                     </td>
                     <td id="share-cta" style="padding-right:50px;vertical-align:middle;text-align:right;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
@@ -585,7 +624,7 @@
                   <tr id="footer">
                     <td id="contact" style="padding-left:32px;padding-top:64px;padding-right:12px;vertical-align:top;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
                       <img src="https://mcusercontent.com/f0c262661c7720bbbb8a691d9/images/a6143815-03d6-4fea-972d-223fa6911a19.png" width="230" alt="The Office of Experience" style="border: 0;height: auto;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" />
-                      <p id="contact-p" style="font-weight:normal;font-size:21px;line-height:30px;color:#000;margin-bottom:15px;padding-top:16px;font-family:'Suisse Book', Helvetica, Arial, sans-serif;width:80%;margin:10px 0;padding:0;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
+                      <p id="contact-p" style="font-weight:normal;font-size:21px;line-height:30px;color:#000;margin-bottom:15px;padding-top:16px;font-family:'Suisse Book', Helvetica, Arial, sans-serif;margin:10px 90px 10px 0;padding:0;mso-line-height-rule:exactly;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;">
                         The Office of Experience is a design and digital innovation agency that helps companies excel at every point of interface with their customers. By integrating strategy, design and technology, we ensure that the brands and experiences of our clients operate as one, bridging expectation and reality to build value.
                         <br/>
 						<br/>
